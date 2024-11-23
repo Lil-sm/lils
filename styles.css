@@ -1,0 +1,76 @@
+/* Enhanced Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent backdrop */
+    padding: 30px;
+    border-radius: 10px;
+    color: #00FF00;
+    text-align: center;
+    z-index: 100;
+    border: 5px solid #00FF00;
+    animation: popupSlideIn 0.8s ease-in-out;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 30px #00FF00;
+}
+
+/* Transparent backdrop */
+.popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+    z-index: -1;
+}
+
+/* Styling for links inside the popup */
+.popup-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-links a {
+    color: #00FF00;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+.popup-links a:hover {
+    color: black;
+    background-color: #00FF00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: none;
+}
+
+/* Close button improvements */
+.close-btn {
+    margin-top: 20px;
+    background: #00FF00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: black;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
+    transform: scale(1.1);
+}
